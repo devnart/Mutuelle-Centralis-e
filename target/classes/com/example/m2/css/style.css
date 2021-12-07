@@ -1,0 +1,13 @@
+
+.main {
+-fx-background-color: white}
+.button {
+    -fx-cursor: pointer;
+    -fx-background-color: #F08A5D;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+}
+.button:hover {
+    -fx-background-color: #cb6d42;
+
+}

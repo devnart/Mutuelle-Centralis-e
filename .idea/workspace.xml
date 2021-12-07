@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="21uS3dNdM8RIEQTfS9nKHQPfnoX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/m2/json" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\json" />
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\java\com\example\m2\controller" />
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\fxml" />
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2" />
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\fx" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.m2.HelloApplication" />
+      <module name="m2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m2.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="" />
+      <created>1638789282855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638789282855</updated>
+      <workItem from="1638789284101" duration="20000" />
+      <workItem from="1638789426163" duration="2100000" />
+      <workItem from="1638796440808" duration="717000" />
+      <workItem from="1638799041080" duration="5326000" />
+      <workItem from="1638865937067" duration="481000" />
+      <workItem from="1638866440059" duration="966000" />
+      <workItem from="1638867438951" duration="910000" />
+      <workItem from="1638868378456" duration="1556000" />
+      <workItem from="1638870758979" duration="1150000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
