@@ -26,7 +26,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Clients">
+            <Button mnemonicParsing="false" onAction="#clientTab" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Clients">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -58,7 +58,7 @@
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id Type :" />
-                        <RadioButton fx:id="cin" mnemonicParsing="false" style="-fx-padding: 10;" text="CIN">
+                        <RadioButton fx:id="cin" mnemonicParsing="false" selected="true" style="-fx-padding: 10;" text="CIN">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>

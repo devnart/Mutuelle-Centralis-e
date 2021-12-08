@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="validation">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/clients-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/m2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/login-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/func.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/func.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/login-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/json/func.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/json/func.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="21uS3dNdM8RIEQTfS9nKHQPfnoX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -110,12 +110,35 @@
       <workItem from="1638870758979" duration="7014000" />
       <workItem from="1638883933880" duration="4659000" />
       <workItem from="1638891735528" duration="2664000" />
-      <workItem from="1638951790305" duration="1291000" />
+      <workItem from="1638951790305" duration="14024000" />
     </task>
+    <task id="LOCAL-00001" summary="validation">
+      <created>1638953222221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638953222221</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,6 @@
 package com.example.m2.controller;
 
+import com.example.m2.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -63,13 +64,41 @@ public class Dashboard {
     @FXML
     private Button button;
 
-ValidationSupport validationSupport = new ValidationSupport();
+    JSONArray employeeList = new JSONArray();
 
+    ValidationSupport validationSupport = new ValidationSupport();
+
+    public void clientTab() throws IOException {
+
+        HelloApplication m = new HelloApplication();
+        m.changeScene("clients-view.fxml");
+
+    }
     public void addUser() {
 
-        validationSupport.registerValidator(fname, Validator.createRegexValidator("First Name must be between 2 and 20 characters", "^.{2,20}$", Severity.ERROR));
-        validationSupport.registerValidator(lname, Validator.createRegexValidator("Last Name must be between 2 and 20 characters", "^.{2,20}$", Severity.ERROR));
+            validationSupport.registerValidator(fname, Validator.createRegexValidator("First Name must be between 2 and 50 characters", "^.{2,50}$", Severity.ERROR));
+            validationSupport.registerValidator(lname, Validator.createRegexValidator("Last Name must be between 2 and 50 characters", "^.{2,50}$", Severity.ERROR));
+            validationSupport.registerValidator(email, Validator.createRegexValidator("Email is not valid", "^\\S+@\\S+\\.\\S+$", Severity.ERROR));
+            validationSupport.registerValidator(phone, Validator.createRegexValidator("Phone number is not valid", "^\\d{9}$", Severity.ERROR));
+            validationSupport.registerValidator(address, Validator.createEmptyValidator("Address is required", Severity.ERROR));
+            validationSupport.registerValidator(date, Validator.createEmptyValidator("Date is required", Severity.ERROR));
+            validationSupport.registerValidator(badge, Validator.createRegexValidator("Badge must be 10 characters", "^.{10}$", Severity.ERROR));
+            validationSupport.registerValidator(company, Validator.createRegexValidator("First Name must be between 1 and 50 characters", "^.{1,50}$", Severity.ERROR));
+
+
+            if(cin.isSelected()){
+                validationSupport.registerValidator(id_number, Validator.createRegexValidator("ID number is not valid", "^[A-Z]{2}\\d{6}$", Severity.ERROR));
+            } else if(passport.isSelected()){
+                validationSupport.registerValidator(id_number, Validator.createRegexValidator("ID number is not valid", "^[A-Z]{2}\\d{7}$", Severity.ERROR));
+            }
+
+
+            if(validationSupport.isInvalid()){
+                throw new RuntimeException("Invalid input");
+            }
+
         JSONObject employeeDetails = new JSONObject();
+
         employeeDetails.put("badge", badge.getText());
         employeeDetails.put("first_name", fname.getText());
         employeeDetails.put("last_name", lname.getText());
@@ -83,8 +112,6 @@ ValidationSupport validationSupport = new ValidationSupport();
         employeeDetails.put("id_number", id_number.getText());
 
         System.out.println(employeeDetails);
-
-        JSONArray employeeList = new JSONArray();
         employeeList.add(employeeDetails);
 
         try (FileWriter file = new FileWriter("src/main/resources/com/example/m2/json/employee.json")) {
@@ -95,6 +122,8 @@ ValidationSupport validationSupport = new ValidationSupport();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
 
     public void initialize(){
