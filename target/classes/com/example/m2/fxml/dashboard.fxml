@@ -1,11 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m2.controller.Dashboard">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m2.controller.Dashboard">
    <children>
-      <Text layoutX="286.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello" />
+      <HBox prefHeight="72.0" prefWidth="800.0" style="-fx-background-color: B83B5E;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Add Client">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Clients">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="29.0" layoutY="94.0" prefHeight="481.0" prefWidth="742.0">
+         <children>
+            <GridPane hgap="10" layoutX="-7.0" layoutY="87.0" prefHeight="278.0" prefWidth="742.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="425.20001220703125" minWidth="10.0" prefWidth="366.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.79998779296875" minWidth="10.0" prefWidth="366.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="badge" prefHeight="26.0" prefWidth="333.0" promptText="N° badge" />
+                  <TextField fx:id="company" promptText="Nom d’entreprise" GridPane.columnIndex="1" />
+                  <TextField fx:id="fname" promptText="Prénom " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="date" prefHeight="26.0" prefWidth="370.0" promptText="Date de début" GridPane.rowIndex="1" />
+                  <TextField fx:id="lname" promptText="Nom " GridPane.rowIndex="2" />
+                  <TextField fx:id="email" promptText="Email " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id Type :" />
+                        <RadioButton fx:id="cin" mnemonicParsing="false" style="-fx-padding: 10;" text="CIN">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="id_type" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="passport" mnemonicParsing="false" style="-fx-padding: 10;" text="Passport" toggleGroup="$id_type" />
+                        <TextField fx:id="id_number" />
+                     </children>
+                  </HBox>
+                  <ComboBox fx:id="country_list" prefHeight="26.0" prefWidth="103.0" promptText="Country" GridPane.rowIndex="3" />
+                  <TextField fx:id="phone" maxWidth="-Infinity" prefHeight="26.0" prefWidth="256.0" promptText="Téléphone " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <TextArea fx:id="address" prefHeight="57.0" prefWidth="586.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <Button fx:id="button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addUser" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: F08A5D;" text="Button" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </GridPane>
+            <Text fill="#d94a4a92" layoutX="-7.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Clients">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="35.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

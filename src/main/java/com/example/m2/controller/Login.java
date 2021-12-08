@@ -45,7 +45,6 @@ public class Login {
             Object obj = jsonParser.parse(reader);
 
             JSONArray employeeList = (JSONArray) obj;
-            System.out.println(employeeList);
 
             for(int i = 0; i < employeeList.size(); i++) {
                 JSONObject employee = (JSONObject) employeeList.get(i);

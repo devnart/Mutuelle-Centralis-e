@@ -8,6 +8,25 @@
     -fx-font-weight: 700;
 }
 .button:hover {
-    -fx-background-color: #cb6d42;
+    -fx-background-color: #733213;
 
+}
+
+.navigation {
+    -fx-background-color: #B83B5E;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+}
+.navigation:hover
+{
+    -fx-background-color: #6A2C70;
+}
+
+.test {
+    -fx-min-height: 100px;
+    -fx-background-color: #F08A5D;
+    -fx-border-radius: 0;
+    -fx-text-fill: #fff !important;
+    -fx-font-weight: 700;
+    -fx-padding: 10px;
 }

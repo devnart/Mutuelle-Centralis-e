@@ -2,6 +2,7 @@ module com.example.m2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires org.controlsfx.controls;
 
 
     opens com.example.m2 to javafx.fxml;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -23,7 +24,10 @@
         <AnchorPane prefHeight="193.0" prefWidth="600.0" styleClass="main" BorderPane.alignment="CENTER">
                 <TextField fx:id="email" layoutX="184.0" layoutY="68.0" prefHeight="35.0" prefWidth="231.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: #ddd;" />
                 <PasswordField fx:id="password" layoutX="184.0" layoutY="111.0" prefHeight="35.0" prefWidth="231.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #ddd;" />
-                <Button fx:id="button" layoutX="184.0" layoutY="154.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="37.0" prefWidth="232.0" style="-fx-cursor: pointer;" stylesheets="@../css/style.css" text="Login" />
+                <Button fx:id="button" layoutX="184.0" layoutY="154.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="37.0" prefWidth="232.0" style="-fx-cursor: pointer;" stylesheets="@../css/style.css" text="Login">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
                 <Label fx:id="message" layoutX="150.0" layoutY="204.0" prefHeight="18.0" prefWidth="300.0" textAlignment="CENTER" textFill="#e42727" />
         </AnchorPane>
     </center>

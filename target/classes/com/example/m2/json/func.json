@@ -1,4 +1,12 @@
-[
+[{
+    "firstname": "Ahmed",
+    "lastname": "Mohammed",
+    "cin": "HH112233",
+    "phone" : "+212611221122",
+    "email" : "a",
+    "password" : "a",
+    "entity" : "OMFAM"
+  },
 {
 "firstname": "Ahmed",
 "lastname": "Mohammed",
