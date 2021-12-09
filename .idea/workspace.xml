@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="validation">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/clients-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" afterDir="false" />
+    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="final commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +102,7 @@
       <workItem from="1638870758979" duration="7014000" />
       <workItem from="1638883933880" duration="4659000" />
       <workItem from="1638891735528" duration="2664000" />
-      <workItem from="1638951790305" duration="14024000" />
+      <workItem from="1638951790305" duration="16797000" />
     </task>
     <task id="LOCAL-00001" summary="validation">
       <created>1638953222221</created>
@@ -119,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638953222221</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="final commit">
+      <created>1638971422708</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638971422708</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation" />
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

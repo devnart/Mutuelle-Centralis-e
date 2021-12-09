@@ -65,12 +65,12 @@ public class Dashboard {
     private Button button;
 
     JSONArray employeeList = new JSONArray();
+    HelloApplication m = new HelloApplication();
 
     ValidationSupport validationSupport = new ValidationSupport();
 
     public void clientTab() throws IOException {
 
-        HelloApplication m = new HelloApplication();
         m.changeScene("clients-view.fxml");
 
     }
@@ -79,11 +79,12 @@ public class Dashboard {
             validationSupport.registerValidator(fname, Validator.createRegexValidator("First Name must be between 2 and 50 characters", "^.{2,50}$", Severity.ERROR));
             validationSupport.registerValidator(lname, Validator.createRegexValidator("Last Name must be between 2 and 50 characters", "^.{2,50}$", Severity.ERROR));
             validationSupport.registerValidator(email, Validator.createRegexValidator("Email is not valid", "^\\S+@\\S+\\.\\S+$", Severity.ERROR));
-            validationSupport.registerValidator(phone, Validator.createRegexValidator("Phone number is not valid", "^\\d{9}$", Severity.ERROR));
+            validationSupport.registerValidator(phone, Validator.createRegexValidator("Phone number must be start with 6 or 7", "^[67]\\d{8}$", Severity.ERROR));
             validationSupport.registerValidator(address, Validator.createEmptyValidator("Address is required", Severity.ERROR));
             validationSupport.registerValidator(date, Validator.createEmptyValidator("Date is required", Severity.ERROR));
             validationSupport.registerValidator(badge, Validator.createRegexValidator("Badge must be 10 characters", "^.{10}$", Severity.ERROR));
             validationSupport.registerValidator(company, Validator.createRegexValidator("First Name must be between 1 and 50 characters", "^.{1,50}$", Severity.ERROR));
+            validationSupport.registerValidator(country_list, Validator.createEmptyValidator("Country is required", Severity.ERROR));
 
 
             if(cin.isSelected()){
@@ -104,6 +105,7 @@ public class Dashboard {
         employeeDetails.put("last_name", lname.getText());
         employeeDetails.put("company",company.getText());
         employeeDetails.put("email", email.getText());
+        employeeDetails.put("country_list", country_list.getValue());
         employeeDetails.put("phone", phone.getText());
         employeeDetails.put("address", address.getText());
         employeeDetails.put("date_of_birth", date.getValue().toString());
