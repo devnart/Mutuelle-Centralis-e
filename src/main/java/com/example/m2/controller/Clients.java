@@ -1,24 +1,19 @@
 package com.example.m2.controller;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.example.m2.HelloApplication;
 import com.example.m2.model.Client;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.controlsfx.control.SearchableComboBox;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class Clients implements Initializable {
 
@@ -41,60 +36,44 @@ public class Clients implements Initializable {
     @FXML
     private TableColumn<Client, String> addressCol;
     @FXML
+    private TableColumn<Client, String> createdCol;
+    @FXML
     private TableView<Client> table;
+    @FXML
+    private TextField searchInput;
+    @FXML
+    private Button searchBtn;
+    @FXML
+    private SearchableComboBox<String> companies;
 
-    public void parseUsers() throws IOException {
+    HelloApplication m = new HelloApplication();
 
-        JSONParser jsonParser = new JSONParser();
-        try (FileReader reader = new FileReader("C:\\Users\\hamza\\Desktop\\Youcode\\B3\\m2\\src\\main\\resources\\com\\example\\m2\\json\\employee.json"))
-        {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-
-            JSONArray country = (JSONArray) obj;
-
-            for(int i=0;i<country.size();i++){
-                JSONObject country_obj = (JSONObject) country.get(i);
-                String badge = (String) country_obj.get("badge");
-                String company = (String) country_obj.get("company");
-                String date = (String) country_obj.get("date_of_birth");
-                String fname = (String) country_obj.get("first_name");
-                String lname = (String) country_obj.get("last_name");
-                String id = (String) country_obj.get("id_number");
-                String tele = (String) country_obj.get("phone");
-                String email = (String) country_obj.get("email");
-                String address = (String) country_obj.get("address");
-
-                Client client = new Client(badge,company,date,fname,lname,id,tele,email,address);
-                clients.add(client);
-            }
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
-    ObservableList<Client> clients = FXCollections.observableArrayList();
-
+    com.example.m2.DAO.Client client = new com.example.m2.DAO.Client();
     public void addTab() throws IOException {
 
-        HelloApplication m = new HelloApplication();
         m.changeScene("dashboard.fxml");
+
+
+    }
+
+    public void statsTab() throws IOException {
+
+        m.changeScene("chart-view.fxml");
+
+    }
+
+    public ObservableList<Client> getClients(){
+
+        return client.index();
+
 
     }
 
     @Override
     public void initialize(URL url, java.util.ResourceBundle resources) {
 
-        try {
-            parseUsers();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ObservableList<String> companiesList = FXCollections.observableArrayList(getCompanies());
+        companies.setItems(companiesList);
 
         badgeCol.setCellValueFactory(new PropertyValueFactory<Client,String>("badge"));
         companyCol.setCellValueFactory(new PropertyValueFactory<Client,String>("company"));
@@ -105,13 +84,32 @@ public class Clients implements Initializable {
         teleCol.setCellValueFactory(new PropertyValueFactory<Client,String>("tele"));
         emailCol.setCellValueFactory(new PropertyValueFactory<Client,String>("email"));
         addressCol.setCellValueFactory(new PropertyValueFactory<Client,String>("address"));
+        createdCol.setCellValueFactory(new PropertyValueFactory<Client,String>("created_at"));
 
-        table.setItems(clients);
+        table.setItems(getClients());
     }
 
+    public ObservableList<Client> search(String search){
+        return client.search(search);
+    }
 
+    public ObservableList<Client> getByCompany(String company){
+        ObservableList<Client> byCompany = FXCollections.observableArrayList(client.getByCompany(company));
+        return byCompany;
+    }
 
+    public void handleSearch() throws IOException {
+            table.getItems().clear();
+            table.setItems(search(searchInput.getText()));
+    }
 
+    public void handleSearchByCompany() throws IOException {
+        table.getItems().clear();
+        table.setItems(getByCompany(companies.getValue()));
+    }
 
+    public ArrayList<String> getCompanies(){
+        return client.getAllCompany();
+    }
 
 }

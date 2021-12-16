@@ -1,9 +1,9 @@
 package com.example.m2.controller;
 
+import com.example.m2.DAO.Client;
 import com.example.m2.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
 import org.controlsfx.validation.Severity;
 import org.controlsfx.validation.ValidationSupport;
 import org.controlsfx.validation.Validator;
@@ -16,8 +16,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 
-import impl.org.controlsfx.*;
 public class Dashboard {
 
     public Dashboard(){
@@ -66,12 +66,18 @@ public class Dashboard {
 
     JSONArray employeeList = new JSONArray();
     HelloApplication m = new HelloApplication();
-
+    Client client = new Client();
     ValidationSupport validationSupport = new ValidationSupport();
 
     public void clientTab() throws IOException {
 
         m.changeScene("clients-view.fxml");
+
+    }
+
+    public void statsTab() throws IOException {
+
+        m.changeScene("chart-view.fxml");
 
     }
     public void addUser() {
@@ -86,19 +92,13 @@ public class Dashboard {
             validationSupport.registerValidator(company, Validator.createRegexValidator("First Name must be between 1 and 50 characters", "^.{1,50}$", Severity.ERROR));
             validationSupport.registerValidator(country_list, Validator.createEmptyValidator("Country is required", Severity.ERROR));
 
-
             if(cin.isSelected()){
                 validationSupport.registerValidator(id_number, Validator.createRegexValidator("ID number is not valid", "^[A-Z]{2}\\d{6}$", Severity.ERROR));
             } else if(passport.isSelected()){
                 validationSupport.registerValidator(id_number, Validator.createRegexValidator("ID number is not valid", "^[A-Z]{2}\\d{7}$", Severity.ERROR));
             }
 
-
-            if(validationSupport.isInvalid()){
-                throw new RuntimeException("Invalid input");
-            }
-
-        JSONObject employeeDetails = new JSONObject();
+        HashMap employeeDetails = new HashMap();
 
         employeeDetails.put("badge", badge.getText());
         employeeDetails.put("first_name", fname.getText());
@@ -108,23 +108,12 @@ public class Dashboard {
         employeeDetails.put("country_list", country_list.getValue());
         employeeDetails.put("phone", phone.getText());
         employeeDetails.put("address", address.getText());
-        employeeDetails.put("date_of_birth", date.getValue().toString());
+        employeeDetails.put("hire_date", date.getValue());
         employeeDetails.put("passport", passport.isSelected());
         employeeDetails.put("cin", cin.isSelected());
         employeeDetails.put("id_number", id_number.getText());
 
-        System.out.println(employeeDetails);
-        employeeList.add(employeeDetails);
-
-        try (FileWriter file = new FileWriter("src/main/resources/com/example/m2/json/employee.json")) {
-            //We can write any JSONArray or JSONObject instance to the file
-            file.write(employeeList.toJSONString());
-            file.flush();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        client.store(employeeDetails);
 
     }
 

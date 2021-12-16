@@ -3,6 +3,9 @@ module com.example.m2 {
     requires javafx.fxml;
     requires json.simple;
     requires org.controlsfx.controls;
+    requires java.sql;
+    requires mysql.connector.java;
+    requires bcrypt;
 
 
     opens com.example.m2 to javafx.fxml;

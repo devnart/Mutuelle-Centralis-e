@@ -31,6 +31,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Button mnemonicParsing="false" onAction="#statsTab" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Statistics">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </HBox>
       <AnchorPane layoutX="29.0" layoutY="94.0" prefHeight="481.0" prefWidth="742.0">

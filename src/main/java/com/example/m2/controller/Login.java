@@ -1,5 +1,8 @@
 package com.example.m2.controller;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.example.m2.DAO.Client;
+import com.example.m2.DAO.User;
 import com.example.m2.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,46 +33,37 @@ public class Login {
     @FXML
     private Label message;
 
-    public void userLogIn(ActionEvent event) throws IOException {
-
-        checkLogin();
-
-        }
+    HelloApplication main = new HelloApplication();
+    User user = new User();
 
     public void checkLogin() throws IOException {
-        HelloApplication m = new HelloApplication();
-        JSONParser jsonParser = new JSONParser();
-        try (FileReader reader = new FileReader("C:\\Users\\hamza\\Desktop\\Youcode\\B3\\m2\\src\\main\\resources\\com\\example\\m2\\json\\func.json"))
+
+
+        try
         {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
+            if((this.email.getText().isEmpty() || this.password.getText().isEmpty())){
+                message.setText("Please fill all the fields");
 
-            JSONArray employeeList = (JSONArray) obj;
+                String password = "vAwKS9X";
+                String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
+                System.out.println(bcryptHashString);
+                BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
+                System.out.println(result.verified);
 
-            for(int i = 0; i < employeeList.size(); i++) {
-                JSONObject employee = (JSONObject) employeeList.get(i);
-                String email = (String) employee.get("email");
-                String password = (String) employee.get("password");
-
-                if((this.email.getText().isEmpty() || this.password.getText().isEmpty())){
-                    message.setText("Please fill all the fields");
-                    break;
-                } else if (email.equals(this.email.getText()) && password.equals(this.password.getText())){
-                    message.setText("Success!");
-                    m.changeScene("dashboard.fxml");
-                    break;
-                } else {
-                    message.setText("Wrong email or password");
-                }
+            } else if (userLogin(email.getText(), password.getText())){
+                message.setText("Success!");
+                main.changeScene("dashboard.fxml");
+            } else {
+                message.setText("Wrong email or password");
             }
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Boolean userLogin(String email, String password) {
+
+        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword(email));
+        return result.verified;
     }
 }

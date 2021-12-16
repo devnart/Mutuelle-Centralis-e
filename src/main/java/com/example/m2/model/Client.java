@@ -9,7 +9,9 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Client {
     private String badge;
@@ -20,10 +22,10 @@ public class Client {
     private String email;
     private String tele;
     private String address;
-    private String date;
+    private Date date;
+    private Timestamp created_at;
 
-
-    public Client(String badge, String company, String fname, String lname, String id, String email, String tele, String address, String date) {
+    public Client(String badge, String company, Date date,String fname, String lname, String id, String email, String tele, String address,Timestamp created_at) {
         this.badge = badge;
         this.company = company;
         this.fname = fname;
@@ -33,10 +35,15 @@ public class Client {
         this.tele = tele;
         this.address = address;
         this.date = date;
+        this.created_at = created_at;
     }
 
     public String getBadge() {
         return badge;
+    }
+
+    public Timestamp getCreated_at(){
+        return created_at;
     }
 
     public void setBadge(String badge) {
@@ -99,11 +106,11 @@ public class Client {
         this.address = address;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
