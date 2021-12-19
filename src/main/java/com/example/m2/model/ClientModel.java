@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Client {
+public class ClientModel {
     private String badge;
     private String company;
     private String fname;
@@ -25,7 +25,7 @@ public class Client {
     private Date date;
     private Timestamp created_at;
 
-    public Client(String badge, String company, Date date,String fname, String lname, String id, String email, String tele, String address,Timestamp created_at) {
+    public ClientModel(String badge, String company, Date date, String fname, String lname, String id, String email, String tele, String address, Timestamp created_at) {
         this.badge = badge;
         this.company = company;
         this.fname = fname;

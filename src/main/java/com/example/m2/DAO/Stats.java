@@ -1,13 +1,7 @@
 package com.example.m2.DAO;
 
-import com.example.m2.model.Client;
-import javafx.collections.ObservableList;
-
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Stats {

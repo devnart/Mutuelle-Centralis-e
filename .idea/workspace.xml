@@ -4,30 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="final commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Stats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Statis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/chart-view.fxml" afterDir="false" />
+    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="chart">
+      <change afterPath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/m2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/m2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/clients-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/clients-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/m2/json/employee.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/json/employee.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Statis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Statis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/model/ClientModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +31,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,8 +53,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/bytes-1.3.0.jar" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ArabicSpellChecker-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -80,8 +77,14 @@
       <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2" />
       <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\fx" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.m2.controller" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.m2.HelloApplication" />
       <module name="m2" />
@@ -95,9 +98,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClientsTest.getClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m2.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.m2.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.m2.controller.ClientsTest" />
+      <option name="METHOD_NAME" value="getClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientsTest.getClients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m2.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.m2.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.m2.controller.ClientsTest" />
+      <option name="METHOD_NAME" value="getClients" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.ClientsTest.getClients" />
+        <item itemvalue="JUnit.ClientsTest.getClient" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +163,8 @@
       <workItem from="1639385735100" duration="584000" />
       <workItem from="1639386347951" duration="14259000" />
       <workItem from="1639477099734" duration="13130000" />
-      <workItem from="1639579580957" duration="3963000" />
+      <workItem from="1639579580957" duration="4411000" />
+      <workItem from="1639645375113" duration="10010000" />
     </task>
     <task id="LOCAL-00001" summary="validation">
       <created>1638953222221</created>
@@ -149,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639044030406</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chart">
+      <created>1639644893947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639644893947</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +215,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="validation" />
     <MESSAGE value="final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
+    <MESSAGE value="chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

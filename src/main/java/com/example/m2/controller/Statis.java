@@ -40,9 +40,8 @@ public class Statis implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Series 1");
+        series.setName("Created per day");
 
         // foreach item in the hashmap
         for (String key : stats.index().keySet()) {

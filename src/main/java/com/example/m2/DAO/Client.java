@@ -1,23 +1,21 @@
 package com.example.m2.DAO;
 
+import com.example.m2.model.ClientModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Client {
 
     DBConnection dbConnection = new DBConnection();
-    com.example.m2.model.Client client;
+    ClientModel clientModel;
 
-    ObservableList<com.example.m2.model.Client> clients = FXCollections.observableArrayList();
+    ObservableList<ClientModel> clientModels = FXCollections.observableArrayList();
 
-    public ObservableList<com.example.m2.model.Client> index() {
+    public ObservableList<ClientModel> index() {
         ResultSet resultSet = null;
         try {
             String query = "SELECT * FROM client";
@@ -36,13 +34,13 @@ public class Client {
                 String address = resultSet.getString("addresse");
                 Timestamp created_at = resultSet.getTimestamp("created_at");
 
-                clients.add(new com.example.m2.model.Client(badge,company,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
+                clientModels.add(new ClientModel(badge,company,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return clients;
+        return clientModels;
     }
 
     public void store(HashMap list){
@@ -86,7 +84,7 @@ public class Client {
         }
     }
 
-    public ObservableList<com.example.m2.model.Client> search(String item){
+    public ObservableList<ClientModel> search(String item){
             ResultSet resultSet = null;
         try {
             String query = "SELECT * FROM client WHERE firstname LIKE '%"+item+"%' OR lastname LIKE '%"+item+"%' OR phone LIKE '%"+item+"%' OR email LIKE '%"+item+"%' OR addresse LIKE '%"+item+"%'";
@@ -105,13 +103,13 @@ public class Client {
                 String address = resultSet.getString("addresse");
                 Timestamp created_at = resultSet.getTimestamp("created_at");
 
-                clients.add(new com.example.m2.model.Client(badge,company,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
+                clientModels.add(new ClientModel(badge,company,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return clients;
+        return clientModels;
     }
 
     public ArrayList<String> getAllCompany(){
@@ -130,8 +128,8 @@ public class Client {
         return companies;
     }
 
-    public ArrayList<com.example.m2.model.Client> getByCompany(String company){
-        ArrayList<com.example.m2.model.Client> companies = new ArrayList<>();
+    public ArrayList<ClientModel> getByCompany(String company){
+        ArrayList<ClientModel> companies = new ArrayList<>();
 
         try {
             String query = "SELECT * FROM client WHERE company_name = '"+company+"'";
@@ -150,7 +148,7 @@ public class Client {
                 String address = resultSet.getString("addresse");
                 Timestamp created_at = resultSet.getTimestamp("created_at");
 
-                companies.add(new com.example.m2.model.Client(badge,company_name,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
+                companies.add(new ClientModel(badge,company_name,hire_date,first_name,last_name,id_number,email,phone,address,created_at));
             }
         } catch (Exception e) {
             e.printStackTrace();

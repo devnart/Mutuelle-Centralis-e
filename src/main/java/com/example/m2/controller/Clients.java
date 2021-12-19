@@ -1,8 +1,7 @@
 package com.example.m2.controller;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.example.m2.HelloApplication;
-import com.example.m2.model.Client;
+import com.example.m2.model.ClientModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,27 +17,27 @@ import java.util.ArrayList;
 public class Clients implements Initializable {
 
     @FXML
-    private TableColumn<Client, String> badgeCol;
+    private TableColumn<ClientModel, String> badgeCol;
     @FXML
-    private TableColumn<Client, String> companyCol;
+    private TableColumn<ClientModel, String> companyCol;
     @FXML
-    private TableColumn<Client, String> dateCol;
+    private TableColumn<ClientModel, String> dateCol;
     @FXML
-    private TableColumn<Client, String> fnameCol;
+    private TableColumn<ClientModel, String> fnameCol;
     @FXML
-    private TableColumn<Client, String> lnameCol;
+    private TableColumn<ClientModel, String> lnameCol;
     @FXML
-    private TableColumn<Client, String> idCol;
+    private TableColumn<ClientModel, String> idCol;
     @FXML
-    private TableColumn<Client, String> teleCol;
+    private TableColumn<ClientModel, String> teleCol;
     @FXML
-    private TableColumn<Client, String> emailCol;
+    private TableColumn<ClientModel, String> emailCol;
     @FXML
-    private TableColumn<Client, String> addressCol;
+    private TableColumn<ClientModel, String> addressCol;
     @FXML
-    private TableColumn<Client, String> createdCol;
+    private TableColumn<ClientModel, String> createdCol;
     @FXML
-    private TableView<Client> table;
+    private TableView<ClientModel> table;
     @FXML
     private TextField searchInput;
     @FXML
@@ -62,7 +61,7 @@ public class Clients implements Initializable {
 
     }
 
-    public ObservableList<Client> getClients(){
+    public ObservableList<ClientModel> getClients(){
 
         return client.index();
 
@@ -75,26 +74,26 @@ public class Clients implements Initializable {
         ObservableList<String> companiesList = FXCollections.observableArrayList(getCompanies());
         companies.setItems(companiesList);
 
-        badgeCol.setCellValueFactory(new PropertyValueFactory<Client,String>("badge"));
-        companyCol.setCellValueFactory(new PropertyValueFactory<Client,String>("company"));
-        dateCol.setCellValueFactory(new PropertyValueFactory<Client,String>("date"));
-        fnameCol.setCellValueFactory(new PropertyValueFactory<Client,String>("fname"));
-        lnameCol.setCellValueFactory(new PropertyValueFactory<Client,String>("lname"));
-        idCol.setCellValueFactory(new PropertyValueFactory<Client,String>("id"));
-        teleCol.setCellValueFactory(new PropertyValueFactory<Client,String>("tele"));
-        emailCol.setCellValueFactory(new PropertyValueFactory<Client,String>("email"));
-        addressCol.setCellValueFactory(new PropertyValueFactory<Client,String>("address"));
-        createdCol.setCellValueFactory(new PropertyValueFactory<Client,String>("created_at"));
+        badgeCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("badge"));
+        companyCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("company"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("date"));
+        fnameCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("fname"));
+        lnameCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("lname"));
+        idCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("id"));
+        teleCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("tele"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("email"));
+        addressCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("address"));
+        createdCol.setCellValueFactory(new PropertyValueFactory<ClientModel,String>("created_at"));
 
         table.setItems(getClients());
     }
 
-    public ObservableList<Client> search(String search){
+    public ObservableList<ClientModel> search(String search){
         return client.search(search);
     }
 
-    public ObservableList<Client> getByCompany(String company){
-        ObservableList<Client> byCompany = FXCollections.observableArrayList(client.getByCompany(company));
+    public ObservableList<ClientModel> getByCompany(String company){
+        ObservableList<ClientModel> byCompany = FXCollections.observableArrayList(client.getByCompany(company));
         return byCompany;
     }
 
