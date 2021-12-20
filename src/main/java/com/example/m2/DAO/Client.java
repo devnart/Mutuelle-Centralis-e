@@ -115,7 +115,7 @@ public class Client {
     public ArrayList<String> getAllCompany(){
         ArrayList<String> companies = new ArrayList<>();
         try {
-            String query = "SELECT DISTINCT company_name FROM client";
+            String query = "SELECT DISTINCT  (company_name) FROM client";
             PreparedStatement preparedStatement = dbConnection.getConnection().prepareStatement(query);
             ResultSet resultSet =  preparedStatement.executeQuery();
 

@@ -44,12 +44,6 @@ public class Login {
             if((this.email.getText().isEmpty() || this.password.getText().isEmpty())){
                 message.setText("Please fill all the fields");
 
-                String password = "vAwKS9X";
-                String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-                System.out.println(bcryptHashString);
-                BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
-                System.out.println(result.verified);
-
             } else if (userLogin(email.getText(), password.getText())){
                 message.setText("Success!");
                 main.changeScene("dashboard.fxml");
@@ -63,7 +57,13 @@ public class Login {
 
     public Boolean userLogin(String email, String password) {
 
-        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword(email));
-        return result.verified;
+        try {
+            BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword(email));
+            return result.verified;
+        }catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
     }
 }

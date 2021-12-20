@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="chart">
-      <change afterPath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+    <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="JUnit Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/m2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Statis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Statis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/model/ClientModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientsTest.getClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientsTest.getAllCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="m2" />
       <extension name="coverage">
         <pattern>
@@ -108,7 +97,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.m2.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.m2.controller.ClientsTest" />
-      <option name="METHOD_NAME" value="getClient" />
+      <option name="METHOD_NAME" value="getAllCompany" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +119,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClientsTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m2.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.m2.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.m2.controller.ClientsTest" />
+      <option name="METHOD_NAME" value="search" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientsTest.store" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m2.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.m2.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.m2.controller.ClientsTest" />
+      <option name="METHOD_NAME" value="store" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.ClientsTest.getAllCompany" />
+        <item itemvalue="JUnit.ClientsTest.store" />
+        <item itemvalue="JUnit.ClientsTest.search" />
         <item itemvalue="JUnit.ClientsTest.getClients" />
-        <item itemvalue="JUnit.ClientsTest.getClient" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +187,7 @@
       <workItem from="1639386347951" duration="14259000" />
       <workItem from="1639477099734" duration="13130000" />
       <workItem from="1639579580957" duration="4411000" />
-      <workItem from="1639645375113" duration="10010000" />
+      <workItem from="1639645375113" duration="17905000" />
     </task>
     <task id="LOCAL-00001" summary="validation">
       <created>1638953222221</created>
@@ -194,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639644893947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JUnit Testing">
+      <created>1639917168952</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639917168953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +246,8 @@
     <MESSAGE value="validation" />
     <MESSAGE value="final commit" />
     <MESSAGE value="chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="chart" />
+    <MESSAGE value="JUnit Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUnit Testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
