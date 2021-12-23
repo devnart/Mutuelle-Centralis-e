@@ -2,6 +2,7 @@ package com.example.m2.controller;
 
 import com.example.m2.DAO.Client;
 import com.example.m2.HelloApplication;
+import com.example.m2.interfaces.DashboardInterface;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.controlsfx.validation.Severity;
@@ -18,7 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class Dashboard {
+public class Dashboard implements DashboardInterface {
 
     public Dashboard(){
 

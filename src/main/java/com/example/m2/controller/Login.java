@@ -4,6 +4,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.example.m2.DAO.Client;
 import com.example.m2.DAO.User;
 import com.example.m2.HelloApplication;
+import com.example.m2.interfaces.LoginInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,7 +21,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-public class Login {
+public class Login implements LoginInterface {
     public Login(){
 
     }

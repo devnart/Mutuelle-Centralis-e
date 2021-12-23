@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="m2:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="896d256c-cfbc-4c68-8f88-e85ac3e799d3" name="Changes" comment="JUnit Testing">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/m2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_apache_log4j_extras_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/interfaces/ClientInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/interfaces/DashboardInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/interfaces/LoginInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/interfaces/StatisInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/com/example/m2/controller/ClientsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/DAO/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/m2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/m2/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/m2/controller/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -47,9 +70,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ArabicSpellChecker-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../javafx-sdk-17.0.1/bin/vcruntime140_1.dll" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -60,11 +83,11 @@
       <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2" />
+      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources" />
       <recent name="C:\Users\hamza\Desktop\Youcode\B4" />
       <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\java\com\example\m2\controller" />
       <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\fxml" />
-      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2" />
-      <recent name="C:\Users\hamza\Desktop\Youcode\B3\m2\src\main\resources\com\example\m2\fx" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -187,7 +210,8 @@
       <workItem from="1639386347951" duration="14259000" />
       <workItem from="1639477099734" duration="13130000" />
       <workItem from="1639579580957" duration="4411000" />
-      <workItem from="1639645375113" duration="17905000" />
+      <workItem from="1639645375113" duration="24244000" />
+      <workItem from="1640180175741" duration="3469000" />
     </task>
     <task id="LOCAL-00001" summary="validation">
       <created>1638953222221</created>
@@ -224,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639917168953</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="JUnit Testing">
+      <created>1639993931604</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639993931604</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

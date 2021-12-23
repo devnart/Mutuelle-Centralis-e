@@ -1,6 +1,7 @@
 package com.example.m2.controller;
 
 import com.example.m2.HelloApplication;
+import com.example.m2.interfaces.ClientInterface;
 import com.example.m2.model.ClientModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,12 +10,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.controlsfx.control.SearchableComboBox;
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Clients implements Initializable {
+public class Clients implements Initializable, ClientInterface {
 
     @FXML
     private TableColumn<ClientModel, String> badgeCol;
@@ -46,12 +49,12 @@ public class Clients implements Initializable {
     private SearchableComboBox<String> companies;
 
     HelloApplication m = new HelloApplication();
+    private static final Logger log = LogManager.getRootLogger();
 
     com.example.m2.DAO.Client client = new com.example.m2.DAO.Client();
     public void addTab() throws IOException {
-
+        log.debug("Debugging Message");
         m.changeScene("dashboard.fxml");
-
 
     }
 

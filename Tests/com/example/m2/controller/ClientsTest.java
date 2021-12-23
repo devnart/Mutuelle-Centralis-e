@@ -13,15 +13,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ClientsTest {
     Client client = new Client();
+
     @Test
     void getClients() {
-
         Assertions.assertEquals(209, client.index().size());
-
     }
+
     @Test
     void search() {
-        Assertions.assertEquals(1, client.search("Judas").size());
+        Assertions.assertEquals(1, client.search("Hamza").size());
     }
 
     @Test

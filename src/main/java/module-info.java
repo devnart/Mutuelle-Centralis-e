@@ -6,6 +6,7 @@ module com.example.m2 {
     requires java.sql;
     requires mysql.connector.java;
     requires bcrypt;
+    requires apache.log4j.extras;
 
 
     opens com.example.m2 to javafx.fxml;
