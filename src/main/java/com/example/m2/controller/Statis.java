@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,11 +36,13 @@ public class Statis implements Initializable {
 
     @FXML
     LineChart<String, Number> lineChart;
+    private static final Logger log = Logger.getLogger(HelloApplication.class.getName());
 
     Stats stats = new Stats();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        log.info("Getting Statis");
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Created per day");
 

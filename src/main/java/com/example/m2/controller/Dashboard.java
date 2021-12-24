@@ -5,6 +5,8 @@ import com.example.m2.HelloApplication;
 import com.example.m2.interfaces.DashboardInterface;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.controlsfx.validation.Severity;
 import org.controlsfx.validation.ValidationSupport;
 import org.controlsfx.validation.Validator;
@@ -13,11 +15,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Properties;
 
 public class Dashboard implements DashboardInterface {
 
@@ -69,6 +75,8 @@ public class Dashboard implements DashboardInterface {
     HelloApplication m = new HelloApplication();
     Client client = new Client();
     ValidationSupport validationSupport = new ValidationSupport();
+    private static final Logger log = LogManager.getLogger(Dashboard.class);
+
 
     public void clientTab() throws IOException {
 
@@ -115,11 +123,14 @@ public class Dashboard implements DashboardInterface {
         employeeDetails.put("id_number", id_number.getText());
 
         client.store(employeeDetails);
+        log.info("Employee details stored");
+        sendMail(employeeDetails.get("email").toString(),"Welcome","We are glad to have you as our client");
+        log.info("Email sent");
 
     }
 
     public void initialize(){
-
+log.info("Dashboard initialized");
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader("C:\\Users\\hamza\\Desktop\\Youcode\\B3\\m2\\src\\main\\resources\\com\\example\\m2\\json\\country.json"))
         {
@@ -135,12 +146,52 @@ public class Dashboard implements DashboardInterface {
                 country_list.getItems().add(country_code);
             }
 
-
         } catch (FileNotFoundException e) {
+            log.error("Country File not found");
             e.printStackTrace();
         } catch (IOException e) {
+            log.error("IO Exception", e);
             e.printStackTrace();
         } catch (ParseException e) {
+            log.error("Parse Exception", e);
+            e.printStackTrace();
+        }
+    }
+
+    public void sendMail(String to, String subject, String body) {
+
+        final String username = "mail";
+        final String password = "password";
+
+        Properties prop = new Properties();
+        prop.put("mail.smtp.host", "smtp.gmail.com");
+        prop.put("mail.smtp.port", "587");
+        prop.put("mail.smtp.auth", "true");
+        prop.put("mail.smtp.starttls.enable", "true"); //TLS
+
+        Session session = Session.getInstance(prop,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("from@gmail.com"));
+            message.setRecipients(
+                    Message.RecipientType.TO,
+                    InternetAddress.parse(to)
+            );
+            message.setSubject(subject);
+            message.setText(body);
+
+            Transport.send(message);
+
+            System.out.println("Done - Email sent successfully");
+
+        } catch (MessagingException e) {
             e.printStackTrace();
         }
     }

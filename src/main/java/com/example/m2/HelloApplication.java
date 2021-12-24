@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
@@ -27,9 +29,10 @@ public class HelloApplication extends Application {
         stg.setScene(new Scene(fxmlLoader.load()));
     }
 
+    private static final Logger log = Logger.getLogger(HelloApplication.class.getName());
 
     public static void main(String[] args) {
-
+        log.info("Application started");
         launch();
     }
 

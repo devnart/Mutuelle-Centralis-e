@@ -4,9 +4,9 @@ module com.example.m2 {
     requires json.simple;
     requires org.controlsfx.controls;
     requires java.sql;
-    requires mysql.connector.java;
     requires bcrypt;
     requires apache.log4j.extras;
+    requires java.mail;
 
 
     opens com.example.m2 to javafx.fxml;

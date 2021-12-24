@@ -17,6 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -36,6 +37,7 @@ public class Login implements LoginInterface {
 
     HelloApplication main = new HelloApplication();
     User user = new User();
+    private static final Logger log = Logger.getLogger(Login.class);
 
     public void checkLogin() throws IOException {
 
@@ -44,11 +46,13 @@ public class Login implements LoginInterface {
         {
             if((this.email.getText().isEmpty() || this.password.getText().isEmpty())){
                 message.setText("Please fill all the fields");
-
+                log.error("Login failed");
             } else if (userLogin(email.getText(), password.getText())){
+                log.info("Login successful");
                 message.setText("Success!");
                 main.changeScene("dashboard.fxml");
             } else {
+                log.error("Login failed");
                 message.setText("Wrong email or password");
             }
         }catch (IOException e) {
@@ -62,6 +66,7 @@ public class Login implements LoginInterface {
             BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword(email));
             return result.verified;
         }catch (Exception e) {
+            log.error("Login failed", e);
             e.printStackTrace();
             return false;
         }
