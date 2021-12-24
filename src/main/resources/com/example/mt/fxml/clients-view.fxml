@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mt.controller.Clients">
+    <children>
+        <HBox prefHeight="72.0" prefWidth="800.0" style="-fx-background-color: B83B5E;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#addTab" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Add Client">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Clients">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#statsTab" prefHeight="71.0" prefWidth="248.0" styleClass="navigation" stylesheets="@../css/style.css" text="Statistics">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </HBox>
+      <TableView fx:id="table" layoutX="31.0" layoutY="154.0">
+        <columns>
+          <TableColumn fx:id="badgeCol" prefWidth="75.0" text="N° Badge" />
+          <TableColumn fx:id="companyCol" prefWidth="75.0" text="Company" />
+            <TableColumn fx:id="dateCol" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="fnameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="lnameCol" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="teleCol" prefWidth="75.0" text="Tele" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="addressCol" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="createdCol" prefWidth="75.0" text="created" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchInput" layoutX="181.0" layoutY="117.0" prefHeight="26.0" prefWidth="445.0" promptText="type something" />
+      <Button fx:id="searchBtn" layoutX="633.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="26.0" prefWidth="150.0" text="Search" />
+      <SearchableComboBox fx:id="companies" layoutX="31.0" layoutY="118.0" onAction="#handleSearchByCompany" prefHeight="26.0" prefWidth="142.0" promptText="Company" />
+    </children>
+</AnchorPane>
